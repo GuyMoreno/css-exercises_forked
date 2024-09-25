@@ -1,0 +1,17 @@
+/* a black background and white text */
+.first_element {
+    background-color: black;
+    color: white;
+}
+
+.second_element {
+    background-color: yellow;
+}
+
+/* Helvetica and Times New Roman,
+with sans-serif as a fallback */
+.first_element,
+.second_element {
+    font-size: 28px;
+    font-family: "Times New Roman", Helvetica, sans-serif;
+}
