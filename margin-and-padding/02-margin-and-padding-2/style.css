@@ -3,25 +3,50 @@ body {
   font-family: sans-serif;
 }
 
+.button,
+.button-container,
 .card {
-  width: 400px;
+  padding: 8px;
+}
+
+.card {
   background: #fff;
-  margin: 16px auto;
+
+
+}
+
+.common-background {
+  background: #e3f4ff;
 }
 
 .title {
-  background: #e3f4ff;
+  font-size: 16px;
+  margin-bottom: 8px;
+  padding: 10px;
 }
 
 .content {
-  background: #e3f4ff;
+  margin-bottom: 8px;
+  /* רווח בין התוכן לבוקס מתחת */
+  padding: 16px 8px;
+  /* למעלה למטה ואז צדדים */
+
 }
 
 .button-container {
-  background: #e3f4ff;
+  text-align: center;
+  /* מרכוז מלל!!!!! */
+
 }
 
 button {
   background: white;
+  display: block;
   border: 1px solid #eee;
+  margin: 0 auto;
+  /* למילה למטה מרחק 0, צמודים.
+  בצדדים מרחק אוטומטי */
+  padding: 8px 24px;
+  /* למעלה למטה 8 ובצדדים 24 */
+
 }
