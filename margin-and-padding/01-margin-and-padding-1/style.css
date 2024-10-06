@@ -6,13 +6,20 @@ simply edit the style.css file so that the divs look like the image below.
 - [] You should only have to change the values of the margin and padding for this exercise. 
 
 - [] You should not have to add or remove properties in the CSS,
-or touch the HTML. */
+or touch the HTML.
+- Div Three's alignment is achieved using `margin` (and not float, flexbox, etc.).
+
+*/
 
 body {
   max-width: 600px;
   margin: 0 auto;
 }
 
+
+/* - Div 1 and Div 3 have 32px between their text and border.
+- Div 1 has 12px between it and any other element on the page. == MARGIN
+*/
 .one {
   background: pink;
   border: 3px solid blue;
@@ -21,18 +28,26 @@ body {
   margin: 12px;
 }
 
+/* - There is a 48px gap between div2 & div3 ==MARGIN_BOTTOM */
 .two {
   background: lightblue;
   border: 3px solid purple;
   /* CHANGE ME */
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 
+/* 
+- Div 1 and Div 3 have 32px between their text and border. = PADDING 
+- Div 3 is aligned to the right.
+
+*/
 .three {
   background: peachpuff;
   border: 3px solid brown;
   width: 200px;
   /* CHANGE ME */
   padding: 32px;
+  /* השימוש ב-margin-left: auto;
+    יוצר אפקט שבו האלמנט נדחף לצידו הימני של הקונטיינר על ידי תופס את כל החלל הפנוי משמאלו. זהו כלי עוצמתי לניהול מיקום של אלמנטים בעיצוב. */
   margin-left: auto;
 }
