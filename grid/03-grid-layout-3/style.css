@@ -5,6 +5,18 @@
 
 .container {
   text-align: center;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 1fr 4fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+  grid-template-rows: 1fr 1fr 3fr 3fr 3fr 1fr;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "s n n n n n n n n n n n"
+    "s a a a a a a a a a a a"
+    "s a a a a a a a a a a a"
+    "s a a a a a a a a a a a"
+    "f f f f f f f f f f f f";
 }
 
 .container div {
@@ -17,15 +29,29 @@
 
 .header {
   background-color: #393f4d;
+  display: inline-grid;
+  /* grid-template-columns: 7fr 1fr 1fr 1fr 1fr; */
+  grid-area: h;
+  grid-template-columns: auto 1fr;
+  align-items: center;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: right;
 }
 
 .sidebar {
-  background-color: #C50208;
+  background-color: #c50208;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 1px;
+  grid-area: s;
+  text-align: center;
 }
 
 .sidebar .photo {
@@ -34,27 +60,41 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  text-align: center;
+  display: grid;
+  align-items: center;
 }
-
 
 .sidebar .side-content {
   background-color: white;
   color: black;
   font-size: 16px;
   font-weight: normal;
+  /* align-items: center; */
+  text-align: center;
+  /* align-self: center; */
 }
 
 .nav {
-  background-color: #C50208;
+  background-color: #c50208;
+  display: grid;
+  grid-area: n;
 }
 
 .nav ul li {
+  display: grid;
   font-size: 16px;
   text-transform: uppercase;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .article {
+  display: grid;
   background-color: #bccbde;
+  grid-area: a;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-rows: repeat(3, 1fr); */
+  gap: 15px;
 }
 
 .article p {
@@ -65,9 +105,10 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-align: center;
+  /* height: 200px; */
 }
 
 .card p {
@@ -83,9 +124,14 @@
 
 .footer {
   background-color: #393f4d;
+  grid-area: f;
 }
 
 .footer p {
   font-size: 13px;
   font-weight: normal;
+}
+
+ul {
+  list-style: none;
 }
